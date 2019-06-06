@@ -1,0 +1,215 @@
+@keyframes neon1 {
+  from {
+    box-shadow: 0 0 200px #fff, 0 0 80px #fff, 0 0 70px #fff, 0 0 200px goldenrod, 0 0 70px goldenrod, 0 0 160px goldenrod, 0 0 200px goldenrod, 0 0 250px goldenrod;
+  }
+  to {
+    box-shadow: 0 0 50px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px goldenrod, 0 0 35px goldenrod, 0 0 40px goldenrod, 0 0 50px goldenrod, 0 0 75px goldenrod;
+  }
+}
+
+.halo {
+    color: #fff;
+    animation: neon1 1.5s ease-in-out infinite alternate;
+    
+    border-radius: 100%;
+    grid-row:1;
+    grid-column:8/13;
+    transform:rotate(59deg);
+    top:74px;
+    left:30px;
+    position: relative;
+    width:40%;
+    height:70%;
+  
+}
+
+
+.ornament {
+    width: 4.5vh;
+    height: 4.5vh;
+    border-radius: 100%;
+    z-index: 4;    
+    display:flex;
+}
+.ornament img {
+    max-width: 5vh;
+    max-height: 5vh;
+}
+
+.red {
+    background-color: red;
+    width:2vh;
+    height:2vh;
+}
+
+.green {
+    background-color: lime;
+    width:2vh;
+    height:2vh;
+}
+
+.popp-uk {
+    background-color: #0030a1;
+}
+.uk-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.uk-logo img{    
+    width:70%;
+    height:70%;
+}
+
+.joey-first{
+    width:60px;
+    height:60px;
+    border-radius:30px;
+    position: relative;
+
+}
+
+.kershaw { 
+    margin-bottom:55px;
+    padding-top:55px;
+}
+
+.mug{
+    border-bottom-left-radius: 80%;
+    border-bottom-right-radius: 80%;
+    background: repeating-linear-gradient(
+        10deg,
+        white,
+        white 7%,
+        red 7%,
+        red 14% 
+    );
+    height:70%;
+    width:70%;
+    display:inline-block;
+    z-index: 6;
+    position: absolute;
+    clip-path: polygon(0 100%, 100% 95%, 95% 0, 0 0)
+
+}
+
+.handle{
+    background-color:inherit;
+    width:20%;
+    height:35%;
+    display:inline-block;
+    top:0px;
+    left:60%;
+    position: absolute;
+    border-style: solid;
+    border-width:5px;
+    border-color: white;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 200%;
+    border-bottom-right-radius: 200%;
+    z-index: 5;
+}
+
+.animated {
+    animation-duration: 30s;
+    animation-fill-mode: both;
+ }
+  
+ @keyframes wobble { 
+    0% { transform: translateX(0%); } 
+    5% { -webkit-transform: translateX(-15%) rotate(-31deg); } 
+    10% { -webkit-transform: translateX(20%) rotate(28deg); } 
+    15% { -webkit-transform: translateX(-12%) rotate(-35deg); } 
+    20% { -webkit-transform: translateX(18%) rotate(24deg); } 
+    25% { -webkit-transform: translateX(-50%) rotate(-11deg); }
+    30% { -webkit-transform: translateX(-21%) rotate(-39deg); } 
+    35% { -webkit-transform: translateX(28%) rotate(33deg); } 
+    40% { -webkit-transform: translateX(-17%) rotate(-34deg); } 
+    45% { -webkit-transform: translateX(14%) rotate(22deg); } 
+    50% { -webkit-transform: translateX(-8%) rotate(-19deg); }
+    55% { -webkit-transform: translateX(-21%) rotate(-31deg); } 
+    60% { -webkit-transform: translateX(29%) rotate(33deg); } 
+    65% { -webkit-transform: translateX(-14%) rotate(-38deg); } 
+    70% { -webkit-transform: translateX(18%) rotate(22deg); } 
+    75% { -webkit-transform: translateX(-1%) rotate(-17deg); }
+    80% { -webkit-transform: translateX(23%) rotate(32deg); } 
+    85% { -webkit-transform: translateX(-17%) rotate(-36deg); } 
+    90% { -webkit-transform: translateX(18%) rotate(27deg); } 
+    95% { -webkit-transform: translateX(-3%) rotate(-15deg); }
+    100% { transform: translateX(0%); } 
+ }
+ 
+ .wobble { 
+    -webkit-animation-name: wobble; 
+    animation-name: wobble; 
+ }
+
+
+
+ .spinner{
+     width:10px;
+     height:10px;
+    border-radius:100%;
+  border:8px solid #DEDEDE;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-top-color:red;
+  border-style:dashed;
+  animation: 5s ease-in-out 0s infinite spinIt;
+ }
+
+ .spinner-reverse{
+     animation: 5s ease-in-out 0s infinite wikiwiki;
+ }
+
+ @keyframes spinIt {
+  0%{
+    border-top-width:8px;
+    transform: rotate(0deg);
+    background-color:red;
+  }
+  10%{
+    border-top-width:100px;
+    background-color:lime
+    
+  }
+  20%{
+    border-top-width:8px;
+    transform: rotate(360deg);
+    background-color:red;
+  }
+  100%{
+      border-top-width:8px;
+      transform: rotate(360deg);
+      background-color:red;
+  }
+}
+
+@keyframes wikiwiki {
+  0%{
+    border-top-width:8px;
+    transform: rotate(360deg);
+    color:purple;
+  }
+  10%{
+    border-top-width:100px;
+    color:green;
+  }
+  20%{
+    border-top-width:8px;
+    transform: rotate(0deg);
+    color:purple;
+  }
+  100%{
+    border-top-width:8px;
+    transform: rotate(0deg);
+    color:purple;
+  }
+}
+
+.hidden-ornament {
+    background-color: green;
+}
